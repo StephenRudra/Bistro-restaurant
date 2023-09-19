@@ -14,7 +14,7 @@ const Card = ({item})=>{
 console.log(item)
 if(user && user.email){
   const orderItem = {foodeItem: _id, name, image, price, email: user.email}
-  fetch('https://bistro-server-five.vercel.app/carts',{
+  fetch('http://localhost:5000/carts',{
     method: 'POST',
     headers:{
       'content-type': 'application/json'

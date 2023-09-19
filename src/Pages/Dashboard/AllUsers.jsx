@@ -10,7 +10,7 @@ const {data: users =[], refetch} = useQuery(['users'], async()=>{
 
 const handledlt = user =>{
   console.log(user._id)
-  fetch(`https://bistro-server-five.vercel.app/users/${user._id}`,{
+  fetch(`http://localhost:5000/users/${user._id}`,{
     method:'DELETE'
   })
   .then(res=>res.json())
@@ -23,7 +23,7 @@ const handledlt = user =>{
 }
 
 const handleAdmin = user =>{
-  fetch(`https://bistro-server-five.vercel.app/users/admin/${user._id}`,{
+  fetch(`http://localhost:5000/users/admin/${user._id}`,{
     method: 'PATCH'
   })
   .then(res => res.json())

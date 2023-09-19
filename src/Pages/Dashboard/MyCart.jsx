@@ -6,7 +6,7 @@ const MyCart =()=>{
     const total = cart.reduce((sum, item)=> item.price + sum, 0)
 
     const handledlt= item=>{
-      fetch(`https://bistro-server-five.vercel.app/carts/${item._id}`,{
+      fetch(`http://localhost:5000/carts/${item._id}`,{
         method:'DELETE'
       })
       .then(res=>res.json())

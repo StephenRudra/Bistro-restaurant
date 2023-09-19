@@ -19,7 +19,7 @@ const SignUp =()=>{
             updateProf(data.name, data.photoURL)
             .then(()=>{
               const saveUser = {name: data.name, email: data.email}
-              fetch('https://bistro-server-five.vercel.app/users',{
+              fetch('http://localhost:5000/users',{
                 method: 'POST',
                 headers:{
                   'content-type': 'application/json'

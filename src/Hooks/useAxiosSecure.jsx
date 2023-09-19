@@ -9,7 +9,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'https://bistro-server-five.vercel.app', 
+    baseURL: 'http://localhost:5000', 
   });
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const useAxiosSecure = () => {
       async (error) => {
         if (error.response && (error.response.status === 401 || error.response.status === 403)) {
           //await logOut();
-          navigate('/login');
+          //navigate('/login');
         }
         return Promise.reject(error);
       }
@@ -53,7 +53,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
 
   const axiosSecure = axios.create({
-    baseURL: 'https://bistro-server-five.vercel.app', 
+    baseURL: 'http://localhost:5000', 
   });
 
   useEffect(() => {
